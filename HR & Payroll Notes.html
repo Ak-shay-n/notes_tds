@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HR & Payroll Notes</title>
+<style>
+:root{--bg:#fafaf7;--card:#fff;--tx:#1c1c1a;--mu:#6b6b66;--ac:#0f6e56;--acbg:#e1f5ee;--bd:#e2e1da;--warn:#fff4dc;--warntx:#7a5200;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161615;--card:#212120;--tx:#ecebe5;--mu:#a3a29b;--ac:#5dcaa5;--acbg:#12372d;--bd:#38382f;--warn:#3a2d10;--warntx:#f0c872}}
+:root[data-theme="dark"]{--bg:#161615;--card:#212120;--tx:#ecebe5;--mu:#a3a29b;--ac:#5dcaa5;--acbg:#12372d;--bd:#38382f;--warn:#3a2d10;--warntx:#f0c872}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:28px 20px 8px;max-width:860px;margin:0 auto}
+h1{font-size:26px;margin:0 0 4px}
+header p{margin:0;color:var(--mu)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;border-bottom:1px solid var(--bd);margin-top:14px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 20px;max-width:860px;margin:0 auto}
+.tabs button{flex:none;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:7px 14px;border-radius:99px;font:inherit;font-size:14px;cursor:pointer}
+.tabs button.on{background:var(--ac);border-color:var(--ac);color:var(--bg);font-weight:600}
+main{max-width:860px;margin:0 auto;padding:18px 20px 60px}
+section{display:none}section.on{display:block}
+h2{font-size:21px;margin:8px 0 12px}
+h3{font-size:16px;margin:0 0 6px;color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px}
+.card ul,section>ul{margin:6px 0 0;padding-left:18px}
+.card li,section>ul li{margin:3px 0}
+.note{background:var(--warn);color:var(--warntx);border-radius:10px;padding:10px 14px;margin:14px 0;font-size:14px}
+.tip{background:var(--acbg);border-radius:10px;padding:10px 14px;margin:14px 0;font-size:15px}
+.scroll{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:420px}
+th,td{border:1px solid var(--bd);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--acbg)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:10px 0}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 14px 10px 46px;margin:8px 0;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:9px;width:24px;height:24px;border-radius:50%;background:var(--ac);color:var(--bg);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+code{background:var(--acbg);padding:1px 6px;border-radius:5px;font-size:14px}
+.calc{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin:10px 0}
+.calc input{padding:8px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);font:inherit;width:160px}
+.calc button{padding:8px 16px;border:0;border-radius:8px;background:var(--ac);color:var(--bg);font:inherit;font-weight:600;cursor:pointer}
+footer{color:var(--mu);font-size:13px;padding:0 20px 30px;max-width:860px;margin:0 auto}
+</style>
+</head>
+<body>
+<header>
+<h1>HR & Payroll Notes</h1>
+<p>Quick fundamentals for an aspiring HR executive (HR operations). Focus: salary TDS &amp; payroll compliance (India).</p>
+</header>
+<nav><div class="tabs" id="tabs"></div></nav>
+<main>
+
+<section id="hr" data-t="HR Overview">
+<h2>8 core HR functions</h2>
+<div class="grid">
+<div class="card"><h3>1. Recruitment &amp; Selection</h3><ul><li>Post vacancies, source candidates</li><li>Screen resumes, run interviews</li><li>Select the right people for the right roles</li></ul></div>
+<div class="card"><h3>2. Onboarding</h3><ul><li>Joining formalities and documents</li><li>Explain policies, rules, culture</li><li>Coordinate induction &amp; training</li></ul></div>
+<div class="card"><h3>3. Employee Relations</h3><ul><li>Resolve conflicts with management</li><li>Handle grievances</li><li>Build teamwork and a positive workplace</li></ul></div>
+<div class="card"><h3>4. Payroll &amp; Benefits ⭐</h3><ul><li>Salaries, bonuses, incentives</li><li>Leave, attendance, insurance, benefits</li><li>Make sure payroll follows the law</li></ul></div>
+<div class="card"><h3>5. Training &amp; Development</h3><ul><li>Find skill gaps</li><li>Organise training sessions</li><li>Support career growth</li></ul></div>
+<div class="card"><h3>6. Performance Management</h3><ul><li>Appraisals and feedback</li><li>Help managers set goals</li><li>Promotions &amp; improvement plans (PIPs)</li></ul></div>
+<div class="card"><h3>7. Policies &amp; Compliance ⭐</h3><ul><li>Ensure policies are followed</li><li>Keep records confidential</li><li>Labour law and workplace safety compliance</li></ul></div>
+<div class="card"><h3>8. Engagement &amp; Retention</h3><ul><li>Team-building and engagement programs</li><li>Recognise contributions</li><li>Raise satisfaction, cut turnover</li></ul></div>
+</div>
+<h2 style="margin-top:22px">Qualities of a good HR</h2>
+<div class="grid">
+<div class="card"><h3>Communication</h3>Clear with employees and management.</div>
+<div class="card"><h3>Empathy</h3>Understand concerns, treat people fairly.</div>
+<div class="card"><h3>Problem-solving</h3>Handle conflicts professionally.</div>
+<div class="card"><h3>Confidentiality</h3>Protect sensitive employee data.</div>
+<div class="card"><h3>Decision-making</h3>Fair, consistent, informed.</div>
+<div class="card"><h3>Organisation</h3>Recruitment, documents and records in order.</div>
+</div>
+<div class="tip">⭐ In HR operations, functions 4 and 7 (payroll + compliance) are where most of your daily work and deadlines live. The next tabs go deeper on them.</div>
+</section>
+
+<section id="pay" data-t="Payroll Basics">
+<h2>Salary structure</h2>
+<div class="scroll"><table>
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td><b>CTC</b></td><td>Cost to Company: everything the employer spends per year (gross + employer PF, gratuity, insurance etc.)</td></tr>
+<tr><td><b>Gross salary</b></td><td>Basic + HRA + allowances + bonus, before any deduction</td></tr>
+<tr><td><b>Basic</b></td><td>Fixed core pay. PF, gratuity and HRA are calculated from it</td></tr>
+<tr><td><b>HRA</b></td><td>House Rent Allowance (partly tax-exempt in old regime if rent is paid)</td></tr>
+<tr><td><b>Deductions</b></td><td>Employee PF, ESI, Professional Tax, TDS, loan recovery, LOP</td></tr>
+<tr><td><b>Net pay</b></td><td>Gross − deductions = take-home</td></tr>
+<tr><td><b>LOP</b></td><td>Loss of Pay: salary cut for unpaid absence</td></tr>
+</table></div>
+<h2>Monthly payroll cycle</h2>
+<ol class="steps">
+<li><b>Collect inputs:</b> attendance, leaves, new joiners, exits, overtime, incentives, loans</li>
+<li><b>Compute gross:</b> pro-rate for joiners/leavers and LOP days</li>
+<li><b>Apply deductions:</b> EPF, ESI, PT, TDS, other recoveries</li>
+<li><b>Review &amp; approve:</b> compare with last month, check variances and errors</li>
+<li><b>Pay salary:</b> bank transfer / bulk upload</li>
+<li><b>Issue payslips</b> to employees</li>
+<li><b>Pay statutory dues</b> (TDS, PF, ESI, PT) by due dates and file returns</li>
+<li><b>Keep records:</b> payroll registers, challans, proofs</li>
+</ol>
+<div class="tip">Golden rule: payroll mistakes hit people’s money. Always cross-check inputs (attendance and joining/exit dates cause most errors).</div>
+<h2>Other pay-related laws (know the names)</h2>
+<ul>
+<li><b>Payment of Bonus Act:</b> statutory bonus, roughly 8.33% to 20% of wages for eligible employees</li>
+<li><b>Payment of Gratuity Act:</b> after 5 years of service; formula = last basic × 15/26 × years of service</li>
+<li><b>Minimum Wages:</b> set by state/central government, varies by skill and industry</li>
+<li><b>Labour Codes:</b> the four new codes (Wages, Social Security, Industrial Relations, OSH) are replacing the older separate Acts. Under the Code on Wages, basic-type wages are expected to form a large share (around 50%) of CTC, which affects PF and gratuity. Check the current status.</li>
+</ul>
+</section>
+
+<section id="tds" data-t="Salary TDS" >
+<h2>TDS on salary (the big one)</h2>
+<div class="card"><b>TDS</b> = Tax Deducted at Source. The employer estimates each employee’s total tax for the year, deducts it from salary every month, and deposits it with the government. Under the old Income-tax Act this is <b>Section 192</b>. The new Income Tax Act, 2025 (in force from 1 Apr 2026) renumbers sections, so it appears as Section 392. The concept is the same; always check the current section and form names on incometax.gov.in.</div>
+<h2>Key terms</h2>
+<div class="scroll"><table>
+<tr><th>Term</th><th>What it is</th></tr>
+<tr><td><b>TAN</b></td><td>Tax Deduction Account Number. Employer must have one to deduct/deposit TDS</td></tr>
+<tr><td><b>PAN</b></td><td>Employee’s tax ID. No PAN means higher TDS rate</td></tr>
+<tr><td><b>Form 12BB</b></td><td>Employee’s declaration of rent, investments, home-loan interest etc. (used mainly in old regime)</td></tr>
+<tr><td><b>Form 16</b></td><td>Annual TDS certificate given to employee (Part A = TDS deposited, Part B = salary and tax computation)</td></tr>
+<tr><td><b>Form 24Q</b></td><td>Quarterly TDS return for salary</td></tr>
+<tr><td><b>Challan 281</b></td><td>Payment challan for depositing TDS</td></tr>
+<tr><td><b>TRACES</b></td><td>Government portal to view TDS status, correct returns, download Form 16</td></tr>
+<tr><td><b>Form 26AS / AIS</b></td><td>Employee’s tax credit statement; TDS should match here</td></tr>
+</table></div>
+<h2>How monthly TDS is calculated</h2>
+<ol class="steps">
+<li>Estimate <b>annual taxable salary</b> (gross for the year, incl. expected bonus)</li>
+<li>Subtract the <b>standard deduction</b> and allowed exemptions/deductions</li>
+<li>Apply the <b>slab rates</b> of the chosen regime</li>
+<li>Apply rebate (Sec 87A) if eligible, then add <b>4% cess</b></li>
+<li><b>Divide by 12</b> (adjusted for tax already deducted and months left)</li>
+</ol>
+<h2>New vs old regime</h2>
+<div class="scroll"><table>
+<tr><th></th><th>New regime (default)</th><th>Old regime</th></tr>
+<tr><td>Slabs (FY 2025-26)</td><td>0–4L nil; 4–8L 5%; 8–12L 10%; 12–16L 15%; 16–20L 20%; 20–24L 25%; above 24L 30%</td><td>0–2.5L nil; 2.5–5L 5%; 5–10L 20%; above 10L 30%</td></tr>
+<tr><td>Standard deduction</td><td>₹75,000</td><td>₹50,000</td></tr>
+<tr><td>Rebate 87A</td><td>No tax if taxable income up to ₹12L</td><td>No tax if taxable income up to ₹5L</td></tr>
+<tr><td>Exemptions (HRA, 80C, 80D…)</td><td>Mostly not allowed</td><td>Allowed (needs Form 12BB proofs)</td></tr>
+</table></div>
+<div class="note">Slabs and limits are changed by the Budget. These are FY 2025-26 figures from my notes. Verify the current year’s rates before running real payroll.</div>
+<h2>Try it: estimate TDS (new regime, FY 2025-26 slabs)</h2>
+<div class="calc">
+<label>Annual gross salary (₹)<br><input id="g" type="number" value="1500000"></label>
+<button onclick="calc()">Calculate</button>
+</div>
+<div id="out" class="card"></div>
+<h2>Due dates and penalties</h2>
+<div class="scroll"><table>
+<tr><th>Item</th><th>Due</th></tr>
+<tr><td>Deposit TDS</td><td>By the 7th of the next month (for March: 30 April)</td></tr>
+<tr><td>Form 24Q returns</td><td>Q1 (Apr–Jun) 31 Jul · Q2 (Jul–Sep) 31 Oct · Q3 (Oct–Dec) 31 Jan · Q4 (Jan–Mar) 31 May</td></tr>
+<tr><td>Form 16 to employees</td><td>By 15 June</td></tr>
+<tr><td>Late deposit interest</td><td>1.5% per month if deducted but not deposited; 1% per month if deduction itself is late</td></tr>
+<tr><td>Late filing fee</td><td>₹200 per day until filed (capped at the TDS amount)</td></tr>
+</table></div>
+<div class="tip">Typical HR ops tasks here: collect investment declarations in April, verify proofs in Jan–Feb, revise TDS for the rest of the year, handle joiners with previous-employer income (Form 16 from old employer), reconcile on TRACES.</div>
+</section>
+
+<section id="stat" data-t="EPF · ESI · PT">
+<h2>Other payroll statutory items</h2>
+<div class="grid">
+<div class="card"><h3>EPF (Provident Fund)</h3><ul>
+<li>Applies to establishments with 20+ employees</li>
+<li>Employee 12% + employer 12% of PF wages (basic + DA)</li>
+<li>Employer’s 12% splits: 8.33% to EPS (pension, on wages capped at ₹15,000) and 3.67% to EPF</li>
+<li>Extra employer charges: EDLI and admin charges</li>
+<li>Each employee has a <b>UAN</b></li>
+<li>Pay via ECR on the EPFO portal by the <b>15th</b> of next month</li></ul></div>
+<div class="card"><h3>ESI (Insurance)</h3><ul>
+<li>For employees earning gross up to ₹21,000/month</li>
+<li>Employee 0.75% + employer 3.25% of gross wages</li>
+<li>Covers medical, sickness and maternity benefits</li>
+<li>Deposit by the <b>15th</b> of next month</li></ul></div>
+<div class="card"><h3>Professional Tax (PT)</h3><ul>
+<li>State-level tax on salary, slab based (max ₹2,500 a year)</li>
+<li>Rules, slabs and due dates differ by state</li>
+<li>Deducted from salary and paid by employer</li></ul></div>
+<div class="card"><h3>Labour Welfare Fund</h3><ul>
+<li>Small state-wise contribution by employer and employee</li>
+<li>Check your state’s rate and due date</li></ul></div>
+</div>
+<h2>Worked example (monthly)</h2>
+<div class="scroll"><table>
+<tr><th>Item</th><th>₹</th></tr>
+<tr><td>Basic</td><td>20,000</td></tr>
+<tr><td>HRA</td><td>10,000</td></tr>
+<tr><td>Special allowance</td><td>20,000</td></tr>
+<tr><td><b>Gross</b></td><td><b>50,000</b></td></tr>
+<tr><td>Employee EPF (12% of basic, assuming full basic as PF wages)</td><td>− 2,400</td></tr>
+<tr><td>Professional Tax (varies by state)</td><td>− PT amount</td></tr>
+<tr><td>TDS (if taxable)</td><td>− TDS amount</td></tr>
+<tr><td><b>Net pay</b></td><td>Gross − all deductions</td></tr>
+</table></div>
+<div class="note">ESI doesn’t apply here because gross is above ₹21,000. Always check each employee’s eligibility every month.</div>
+</section>
+
+<section id="cal" data-t="Compliance Calendar">
+<h2>Cheat-sheet: what’s due when</h2>
+<div class="scroll"><table>
+<tr><th>When</th><th>Task</th></tr>
+<tr><td><b>Every month, by 7th</b></td><td>Deposit TDS (previous month’s deduction)</td></tr>
+<tr><td><b>Every month, by 15th</b></td><td>EPF (ECR) and ESI contributions</td></tr>
+<tr><td><b>Monthly / half-yearly</b></td><td>Professional Tax (depends on state)</td></tr>
+<tr><td><b>31 Jul / 31 Oct / 31 Jan / 31 May</b></td><td>Form 24Q TDS returns (Q1 to Q4)</td></tr>
+<tr><td><b>15 June</b></td><td>Issue Form 16</td></tr>
+<tr><td><b>April</b></td><td>Collect tax regime choice and investment declarations (12BB)</td></tr>
+<tr><td><b>Jan–Feb</b></td><td>Collect investment proofs, finalise year-end TDS</td></tr>
+</table></div>
+<h2>Good habits for payroll compliance</h2>
+<ul>
+<li>Keep a monthly checklist and tick everything off</li>
+<li>Never miss a due date: interest and penalties add up fast</li>
+<li>Reconcile payroll register with challans and returns</li>
+<li>Keep records (registers, challans, declarations) safe and confidential</li>
+<li>Track law and rate changes after every Budget and notification</li>
+</ul>
+</section>
+
+</main>
+<footer>Study notes for fundamentals only, not tax or legal advice. Rates, limits and form names change; verify on official portals (incometax.gov.in, epfindia.gov.in, esic.gov.in) before use.</footer>
+
+<script>
+var secs=[].slice.call(document.querySelectorAll('section')),tb=document.getElementById('tabs');
+secs.forEach(function(s,i){var b=document.createElement('button');b.textContent=s.dataset.t;b.onclick=function(){show(i)};tb.appendChild(b)});
+function show(i){secs.forEach(function(s,j){s.classList.toggle('on',i===j);tb.children[j].classList.toggle('on',i===j)});window.scrollTo(0,0)}
+show(0);
+function fmt(n){return '₹'+Math.round(n).toLocaleString('en-IN')}
+function calc(){
+var g=+document.getElementById('g').value||0,t=Math.max(0,g-75000),sl=[[400000,0],[800000,.05],[1200000,.1],[1600000,.15],[2000000,.2],[2400000,.25],[Infinity,.3]],tax=0,p=0;
+for(var i=0;i<sl.length;i++){var u=sl[i][0];if(t>p){tax+=(Math.min(t,u)-p)*sl[i][1]}p=u}
+if(t<=1200000)tax=0;
+var c=tax*1.04;
+document.getElementById('out').innerHTML='Taxable (after ₹75,000 std. deduction): <b>'+fmt(t)+'</b><br>Tax before cess: <b>'+fmt(tax)+'</b><br>With 4% cess: <b>'+fmt(c)+'</b><br>Approx. monthly TDS: <b>'+fmt(c/12)+'</b><br><small>Simplified: ignores surcharge, marginal relief near ₹12L and other income.</small>';
+}
+calc();
+</script>
+</body>
+</html>
